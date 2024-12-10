@@ -1,10 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {Home} from "../screens/Home";
 import NewFood from "../screens/NewFood";
+import { RootStackParamList } from "../types";
 
 //import Statistics from "@screens/Statistics";
 //import FeedBack from "@components/FeedBack";
-
+const Stack = createNativeStackNavigator<RootStackParamList>();
 export const AppRoutes = () => {
   const { Navigator, Screen } = createNativeStackNavigator();
   return (
