@@ -7,6 +7,7 @@ import {
   ViewDaily,
   TextDaily,
 } from "./styles";
+import { StackNavigationProp } from '@react-navigation/stack';
 import { HourDaily } from "../../components/HourDaily";
 import ScreenContainer from "../../components/ScreenContainer";
 import { Entypo } from "@expo/vector-icons";
@@ -14,9 +15,10 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
 import { useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../../types";
 
 export const Home = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   return (
     <Container>
       <Header />
